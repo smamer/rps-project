@@ -6,28 +6,34 @@ class Game{
         this.countOfTies = 0;
     }
     incrementPlayerWins(){
-        //*********************************ADD CODE HERE *************************************/
+        let countOfPlayerWins = 0
+        console.log(++countOfPlayerWins)
         // Add 1 to the countOfPlayerWins property
     }
 
     incrementComputerWins(){
-        //*********************************ADD CODE HERE *************************************/
+        let countOfComputerWins = 0
+        console.log(++countOfComputerWins)
         // Add 1 to the countOfComputerWins property
     }
 
     incrementCountOfTies(){
-        //*********************************ADD CODE HERE *************************************/
+        let countOfTies = 0
+        console.log(++countOfTies)
         // Add 1 to the countOfTies property
     }
 
 
     setNumberOfRounds(numberOfRounds){
-        //*********************************ADD CODE HERE *************************************/
+        console.log(++numberOfRounds)
         // Set the numberOfRounds property to the parameter
     }
 
     newGame(){
-        //*********************************ADD CODE HERE *************************************/
+    numberOfRounds = null,
+    countOfPlayerWins = 0,
+    countOfComputerWins = 0,
+    countOfTies = 0
         // Clear all properties to their default values
     }
 
@@ -36,7 +42,11 @@ class Game{
      * @returns boolean
      */
      isNumberOfRoundsValid(num) {
-        //*********************************ADD CODE HERE *************************************/
+       if (num < 6 && num > 0) {
+           return true;
+       } else {
+           false;
+       }
         // return a boolean value that shows if the parameter is a valid user input (A number from 1 - 5)
     }
 }

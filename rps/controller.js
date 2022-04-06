@@ -3,17 +3,21 @@ var game = new Game();
 
 // main entry point
 function playGame() {
-    //*********************************ADD CODE HERE *************************************/
+    game.newGame()
     // Call the function game.newGame() to reset the counts.
-
-    //*********************************ADD CODE HERE *************************************/
+    var numberOfRounds = prompt("Please enter how many rounds you would like to play")
+    if (game.IsNumberOfRoundsValid == true) {
+        return game.setNumberOfRounds(numberOfRounds);
+    } else {
+     prompt("You must enter a value between 1 and 5")
+    }
     // Get the number of rounds from the user, and store it in a variable called numberOfRounds.
     // Use game.IsNumerOfRoundsValid() to validate the user input.
     // If the input is valid, use game.setNumberOfRounds(numberOfRounds) to set the number of rounds for the game 
     //  >> Else, try to get the number of rounds for the suer again
 
 
-    //*********************************ADD CODE HERE *************************************/
+    playRound(1 + numberOfRounds)
     // Call playRound() with a parameter of the round count (1 thru numberOfRounds) for each round 
 
 
@@ -50,7 +54,7 @@ function playRound(roundNumber) {
  */
 function getPlayerSelection() {
     
-    //*********************************ADD CODE HERE *************************************/
+    prompt("Enter your move (must be 'ROCK', 'SCISSORS', or 'PAPER'")
     // Prompt, Validate and Return the player selection. This must be in the form of "rock", "paper", or "scissors" exactly
 }
 
