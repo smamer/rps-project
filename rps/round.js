@@ -27,20 +27,20 @@ class Round{
      * @returns Selections
      */
     getComputerSelection() {
-        let computerSelection = Math.floor(Math.random()*10)
+        let computerSelection = Math.floor(Math.random()*9)
         switch (computerSelection) {
             case 0:
             case 1:
             case 2:
-                text = ROCK;
+                return Selections.ROCK;
                 break;
             case 3:
             case 4:
             case 5:
-                text = SCISSORS;
+                return Selections.SCISSORS;
                 break;
             default:
-                text = PAPER;
+                return Selections.PAPER;
         }
         // Use Math.floor and select a random Selections enumerator from above 
     }
@@ -52,9 +52,10 @@ class Round{
      * @returns Outcomes
      */
     determineWinner() {
-        switch (this.playerSelection = ROCK) {
-            case this.computerSelection = PAPER:
-                text = COMPUTER_WINS;
+        switch (this.playerSelection === Selections.ROCK) {
+            case this.computerSelection === Selections.PAPER:
+                game.incrementComputerWins();
+                return Outcomes.COMPUTER_WINS;
                 break;
             case this.computerSelection = ROCK:
                 text = TIE;
